@@ -80,6 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
         
+        
         searching = true
         self.tableview.reloadData()
     }
