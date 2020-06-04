@@ -13,6 +13,8 @@
 		5623611B247836E6000CF9F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56236119247836E6000CF9F5 /* Main.storyboard */; };
 		5623611D247836E7000CF9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5623611C247836E7000CF9F5 /* Assets.xcassets */; };
 		56236120247836E7000CF9F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5623611E247836E7000CF9F5 /* LaunchScreen.storyboard */; };
+		5623612824783982000CF9F5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623612724783982000CF9F5 /* TableViewCell.swift */; };
+		56EC9A232484172C0064982C /* userdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 56EC9A222484172C0064982C /* userdata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5623611C247836E7000CF9F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5623611F247836E7000CF9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56236121247836E7000CF9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5623612724783982000CF9F5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		56EC9A222484172C0064982C /* userdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = userdata.json; path = ../userdata.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		56236107247836E6000CF9F5 = {
 			isa = PBXGroup;
 			children = (
+				56EC9A222484172C0064982C /* userdata.json */,
 				56236112247836E6000CF9F5 /* SortAndFilterApp */,
 				56236111247836E6000CF9F5 /* Products */,
 			);
@@ -60,6 +65,7 @@
 				56236115247836E6000CF9F5 /* SceneDelegate.swift */,
 				56236117247836E6000CF9F5 /* ViewController.swift */,
 				56236119247836E6000CF9F5 /* Main.storyboard */,
+				5623612724783982000CF9F5 /* TableViewCell.swift */,
 				5623611C247836E7000CF9F5 /* Assets.xcassets */,
 				5623611E247836E7000CF9F5 /* LaunchScreen.storyboard */,
 				56236121247836E7000CF9F5 /* Info.plist */,
@@ -127,6 +133,7 @@
 			files = (
 				56236120247836E7000CF9F5 /* LaunchScreen.storyboard in Resources */,
 				5623611D247836E7000CF9F5 /* Assets.xcassets in Resources */,
+				56EC9A232484172C0064982C /* userdata.json in Resources */,
 				5623611B247836E6000CF9F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56236118247836E6000CF9F5 /* ViewController.swift in Sources */,
+				5623612824783982000CF9F5 /* TableViewCell.swift in Sources */,
 				56236114247836E6000CF9F5 /* AppDelegate.swift in Sources */,
 				56236116247836E6000CF9F5 /* SceneDelegate.swift in Sources */,
 			);
