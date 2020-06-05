@@ -11,6 +11,7 @@ import UIKit
 struct jsonstruct: Codable {
     var name:String
     var capital:String
+    var number: Int
 }
 
 
@@ -37,6 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         p = 0
         searchBar.delegate = self
         getDataFromJson()
+        
     }
     
     
@@ -45,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return searchCountry.count
          } else if sorting {
             return arr1.count
-            return arr2.count
+           // return arr2.count
          } else {
             return self.arrdata.count
         }
@@ -55,14 +57,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell:TableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! TableViewCell
         
          if searching {
+                cell.lblCapital.text = "Serial Number:"+(arr3[indexPath.row])
                 cell.lblName.text =  "Name:"+(searchCountry[indexPath.row])
-                cell.lblCapital.text = "Capital:"+(arr3[indexPath.row])
          } else if sorting {
+                cell.lblCapital.text = "Serial Number:"+(arr2[indexPath.row])
                 cell.lblName.text =  "Name:"+(arr1[indexPath.row])
-                cell.lblCapital.text = "Capital:"+(arr2[indexPath.row])
          } else {
+                cell.lblCapital.text = "Serial Number:"+(String(arrdata[indexPath.row].number))
                 cell.lblName.text =  "Name:"+(arrdata[indexPath.row].name)
-                cell.lblCapital.text = "Capital:"+(arrdata[indexPath.row].capital)
          }
             
         return cell
@@ -72,16 +74,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchCountry = self.arr1.filter({$0.prefix(searchText.count) == searchText})
         
-        let a = 0
-        for b in 0..<self.arrdata.count {
-            if (self.arrdata[b].name == searchCountry[0]) {
-                arr3.append(self.arrdata[b].capital)
-                break
+        var a = 0
+        for a in 0..<searchCountry.count {
+         for b in 0..<self.arrdata.count {
+            if (searchCountry[a] == self.arrdata[b].name) {
+                arr3.insert(String(self.arrdata[b].number), at: a)
                 }
             }
-        
-        
+        }
+    
         searching = true
+        
+        if searchText == "" {
+            searching = false
+        }
+        
+        self.tableview.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        //sorting = false
+        //searchBar.text = ""
         self.tableview.reloadData()
     }
     
@@ -91,11 +105,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         p = sender.selectedSegmentIndex
         if(p == 1) {
            sorting = true
+           searching = false
            arr1.sort(by: {$0 < $1})
             for i in 0..<arr1.count {
                 for j in 0..<arr1.count {
                     if (arr1[i] == self.arrdata[j].name) {
-                        arr2.append(self.arrdata[j].capital)
+                        arr2.append(String(self.arrdata[j].number))
                     }
                 }
             }
@@ -104,6 +119,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         if (p == 0) {
             sorting = false
+            searching = false
             self.tableview.reloadData()
         }
     }
