@@ -12,8 +12,6 @@ struct jsonstruct: Codable {
     var capital:String
     var number: Int
 }
-
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     
