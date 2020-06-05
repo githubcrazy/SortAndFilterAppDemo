@@ -14,7 +14,7 @@
 		5623611D247836E7000CF9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5623611C247836E7000CF9F5 /* Assets.xcassets */; };
 		56236120247836E7000CF9F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5623611E247836E7000CF9F5 /* LaunchScreen.storyboard */; };
 		5623612824783982000CF9F5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623612724783982000CF9F5 /* TableViewCell.swift */; };
-		56D6E05D248A24C200749476 /* userdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 56D6E05C248A24C200749476 /* userdata.json */; };
+		56D6E05F248A274B00749476 /* userdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 56D6E05E248A274B00749476 /* userdata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		5623611F247836E7000CF9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56236121247836E7000CF9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5623612724783982000CF9F5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		56D6E05C248A24C200749476 /* userdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = userdata.json; path = ../userdata.json; sourceTree = "<group>"; };
+		56D6E05E248A274B00749476 /* userdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = userdata.json; path = ../../userdata.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,6 @@
 		56236107247836E6000CF9F5 = {
 			isa = PBXGroup;
 			children = (
-				56D6E05C248A24C200749476 /* userdata.json */,
 				56236112247836E6000CF9F5 /* SortAndFilterApp */,
 				56236111247836E6000CF9F5 /* Products */,
 			);
@@ -61,6 +60,7 @@
 		56236112247836E6000CF9F5 /* SortAndFilterApp */ = {
 			isa = PBXGroup;
 			children = (
+				56D6E05E248A274B00749476 /* userdata.json */,
 				56236113247836E6000CF9F5 /* AppDelegate.swift */,
 				56236115247836E6000CF9F5 /* SceneDelegate.swift */,
 				56236117247836E6000CF9F5 /* ViewController.swift */,
@@ -133,7 +133,7 @@
 			files = (
 				56236120247836E7000CF9F5 /* LaunchScreen.storyboard in Resources */,
 				5623611D247836E7000CF9F5 /* Assets.xcassets in Resources */,
-				56D6E05D248A24C200749476 /* userdata.json in Resources */,
+				56D6E05F248A274B00749476 /* userdata.json in Resources */,
 				5623611B247836E6000CF9F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
