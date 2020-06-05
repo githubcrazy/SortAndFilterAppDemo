@@ -5,7 +5,6 @@
 //  Created by ISHAN ARUN PANT on 23/5/20.
 //  Copyright © 2020 ISHAN ARUN PANT. All rights reserved.
 //
-
 import UIKit
 
 struct jsonstruct: Codable {
@@ -171,4 +170,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 }
+
 
